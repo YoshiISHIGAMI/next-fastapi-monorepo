@@ -18,6 +18,7 @@
 
 ## 📁 ディレクトリ構成
 
+```
 study-monorepo-onlinesalon/
 ├── apps/
 │   ├── web/               # Next.js フロントエンドアプリ
@@ -28,6 +29,7 @@ study-monorepo-onlinesalon/
 ├── turbo.json             # Turborepo 設定
 ├── pnpm-workspace.yaml    # pnpm workspace 設定
 └── README.md              # このファイル
+```
 
 ---
 
@@ -49,12 +51,11 @@ pnpm install
 pnpm dev
 ```
 
+---
 
-⸻
-
-📌 今後の予定（ToDo）
-	•	apps/web に Next.js プロジェクトを追加
-	•	apps/api に FastAPI プロジェクトを追加
-	•	openapi/ にスキーマを記述し、型を shared-types/ に生成
-	•	CI/CD 連携（GitHub Actions など）
-	•	デプロイ（Vercel / Railway / Render などを想定）
+## 📌 今後の予定（ToDo）
+- `apps/web` に **Next.js プロジェクト** を追加  
+- `apps/api` に **FastAPI プロジェクト** を追加  
+- `openapi/` にスキーマを記述し、型を `shared-types/` に生成  
+- **CI/CD 連携**（例: GitHub Actions など）  
+- **デプロイ**（例: Vercel / Railway / Render などを想定）
