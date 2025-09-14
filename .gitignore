@@ -1,0 +1,59 @@
+# ======================
+# General
+# ======================
+.DS_Store
+.env
+.env.*        # 複数環境用（.env.development など）
+node_modules/
+dist/
+build/
+out/
+coverage/
+
+# ======================
+# Logs
+# ======================
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ======================
+# Next.js
+# ======================
+.next/
+.vercel/
+.cache/
+
+# ======================
+# Turborepo
+# ======================
+turbo/
+
+# ======================
+# TypeScript
+# ======================
+*.tsbuildinfo
+
+# ======================
+# Editor & OS
+# ======================
+.vscode/
+.idea/
+*.swp
+
+# ======================
+# Python (FastAPI用)
+# ======================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+
+# ======================
+# OpenAPI codegen output (例)
+# ======================
+openapi/generated/
