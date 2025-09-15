@@ -54,8 +54,19 @@ pnpm dev
 ---
 
 ## 📌 今後の予定（ToDo）
-- `apps/web` に **Next.js プロジェクト** を追加  
-- `apps/api` に **FastAPI プロジェクト** を追加  
+- `apps/web` に **Next.js プロジェクト** を追加 ✅ 完了
+- `apps/api` に **FastAPI プロジェクト** を追加 ✅ 完了
+
 - `openapi/` にスキーマを記述し、型を `shared-types/` に生成  
-- **CI/CD 連携**（例: GitHub Actions など）  
-- **デプロイ**（例: Vercel / Railway / Render などを想定）
+- `openapi/schema.yaml` → `shared-types/` に TypeScript 型を生成（例：`openapi-typescript` を使用）
+
+### 🔧 CI/CD 連携
+
+- GitHub Actions で以下を実行：
+  - `apps/web`（Next.js）: lint / format / test
+  - `apps/api`（FastAPI）: lint / format / test
+
+### 🚀 デプロイ戦略
+
+- `apps/web` → **Vercel**
+- `apps/api` → **Railway / Render / Fly.io** など（**Docker 対応可能**）
