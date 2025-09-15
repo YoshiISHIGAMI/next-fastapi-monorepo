@@ -1,72 +1,38 @@
-# 📘 study-monorepo-onlinesalon
+# 📦 next-fastapi-monorepo
 
-オンラインサロンの会員管理やWebサービス機能を、**モノレポ構成**（Turborepo + pnpm workspace）で構築・学習するプロジェクトです。  
-**Next.js + FastAPI + OpenAPI（型共有）** を用いたモダンなWebアプリ開発の実践環境です。
+English follows Japanese. / 日本語のあとに英語が続きます。
 
----
+## 📝 概要（Overview in Japanese）
 
-## 🧩 技術スタック
+このリポジトリは、**Next.js（TypeScript）** と **FastAPI（Python）** を組み合わせて構築された、モダンな**モノレポ開発環境のテンプレート**です。  
+APIスキーマには **OpenAPI** を用い、`shared-types` ディレクトリでフロントエンドとバックエンドの**型を共有**します。
 
-| 区分           | 使用技術                        |
-|----------------|---------------------------------|
-| フロントエンド | Next.js (TypeScript, React)     |
-| バックエンド   | FastAPI (Python)                |
-| API仕様管理    | OpenAPI                         |
-| モノレポ管理   | Turborepo + pnpm workspace      |
+## 🛠 技術スタック
 
----
-
-## 📁 ディレクトリ構成
-
-```
-study-monorepo-onlinesalon/
-├── apps/
-│   ├── web/               # Next.js フロントエンドアプリ
-│   └── api/               # FastAPI バックエンドアプリ
-├── packages/
-│   └── shared-types/      # OpenAPIから生成された型定義
-├── openapi/               # OpenAPI スキーマファイル（YAML/JSON）
-├── turbo.json             # Turborepo 設定
-├── pnpm-workspace.yaml    # pnpm workspace 設定
-└── README.md              # このファイル
-```
+| 区分           | 使用技術                                        |
+|----------------|-------------------------------------------------|
+| フロントエンド | Next.js, TypeScript, Tailwind CSS              |
+| バックエンド   | FastAPI, Python, Poetry                         |
+| APIドキュメント | Swagger UI / Redoc (via FastAPI)               |
+| 型共有         | OpenAPI → `shared-types`（自動生成）           |
+| モノレポ管理   | Turborepo + pnpm workspace                      |
 
 ---
 
-## 🚀 初期セットアップ手順
+# 📦 next-fastapi-monorepo
 
-### 1. リポジトリをクローン
+## 📝 Overview (in English)
 
-```bash
-git clone https://github.com/your-username/study-monorepo-onlinesalon.git
-cd study-monorepo-onlinesalon
-```
-2. 依存パッケージをインストール
-```bash
-pnpm install
-```
-3. アプリを起動
-```bash
-# 開発用に Turbo 経由で両アプリ起動
-pnpm dev
-```
+This repository is a **modern monorepo template** that integrates **Next.js (TypeScript)** and **FastAPI (Python)**.
 
----
+It uses **OpenAPI** to define API schemas and share types between the frontend and backend via the `shared-types` directory.
 
-## 📌 今後の予定（ToDo）
-- `apps/web` に **Next.js プロジェクト** を追加 ✅ 完了
-- `apps/api` に **FastAPI プロジェクト** を追加 ✅ 完了
+## 🛠 Tech Stack
 
-- `openapi/` にスキーマを記述し、型を `shared-types/` に生成  
-- `openapi/schema.yaml` → `shared-types/` に TypeScript 型を生成（例：`openapi-typescript` を使用）
-
-### 🔧 CI/CD 連携
-
-- GitHub Actions で以下を実行：
-  - `apps/web`（Next.js）: lint / format / test
-  - `apps/api`（FastAPI）: lint / format / test
-
-### 🚀 デプロイ戦略
-
-- `apps/web` → **Vercel**
-- `apps/api` → **Railway / Render / Fly.io** など（**Docker 対応可能**）
+| Area         | Tech Used                                      |
+|--------------|------------------------------------------------|
+| Frontend     | Next.js, TypeScript, Tailwind CSS              |
+| Backend      | FastAPI, Python, Poetry                        |
+| API Docs     | Swagger UI / Redoc (via FastAPI)               |
+| Type Sharing | OpenAPI → `shared-types` (auto generated)      |
+| Monorepo     | Turborepo + pnpm workspace                     |
