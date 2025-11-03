@@ -36,3 +36,7 @@ It uses **OpenAPI** to define API schemas and share types between the frontend a
 | API Docs     | Swagger UI / Redoc (via FastAPI)               |
 | Type Sharing | OpenAPI → `shared-types` (auto generated)      |
 | Monorepo     | Turborepo + pnpm workspace                     |
+
+## 🧭 Project Roadmap
+
+See [`docs/TODO.md`](./docs/TODO.md) for the current development roadmap.
